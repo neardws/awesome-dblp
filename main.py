@@ -1,25 +1,29 @@
 import dblp
+from multiprocessing import Pool
 
-# author_list = dblp.search('author', 'kai liu')
-# print(len(author_list))
-# # for index, author in enumerate(author_list):
-# #     print(index)
-# #     print(author.publications[0].title)
 
-# author0 = author_list[0]
-# print(author0.name)
-# print(author0.data)
-# print(len(author0.publications))
-# print(author0.publications[0].title)
-# print(author0.publications[0].journal)
-# print(author0.publications[0].year)
-# print(author0.publications[0].month)
-# print(author0.publications[0].school)
-venue = dblp.search('venue', 'TMC')
-# print(venue[0].acronym)
-# print(venue[0].type)
-# print(venue[0].name)
-# print(venue[0].url)
-print(venue[0].publications[0].title)
-print(len(venue[0].publications))
-# print(len(venue_list))
+if __name__ == '__main__':
+    # keywords = ['cyber physical', 'digital twin', 'meta']
+    keywords = ['cyber physical']
+    venue_names = ['JSAC', 
+                    'TMC', 
+                    'TON', 
+                    'Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication', 
+                    'MobiCom', 
+                    'IEEE Conference on Computer Communications', 
+                    'NSDI']
+    # venue_names = ['Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication', 
+    #                 'MobiCom', 'IEEE Conference on Computer Communications', 'NSDI']
+    query_number = 1000
+    maximum_query_number = 50
+    # pool = Pool(processes=4)
+    # for venue_name in venue_names:
+    #     pool.apply_async(dblp.search_by_keywords_venues, (keywords, [venue_name], query_number, maximum_query_number))
+    # print('Waiting for all subprocesses done...')
+    # pool.close()
+    # pool.join()
+    # print('All subprocesses done.')
+
+    query_number = 5000
+    maximum_query_number = 50
+    dblp.search_by_keywords(keywords, query_number, maximum_query_number)
