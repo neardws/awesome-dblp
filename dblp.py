@@ -49,7 +49,7 @@ class Author(LazyAPIData):
         self.urlpt = urlpt
         self.xml = None
         super(Author, self).__init__(['name','publications','homepages',
-                                      'homonyms'])
+                                        'homonyms'])
 
     def load_data(self):
         headers = {'User-Agent': user_agent.random}
