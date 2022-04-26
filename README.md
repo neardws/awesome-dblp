@@ -5,7 +5,10 @@ A simple python package to search dblp by keywords and venues
 - dblp search API: https://dblp.org/faq/13501473.html
 
 ## How to use
-- search_by_keywords_venues(keywords: list, venue_names: list, query_number: int, maximum_query_number: int)
+- Installation
+~~~pip install awesome-dblp~~~
+- Usage
+~~~search_by_keywords_venues(keywords: list, venue_names: list, query_number: int, maximum_query_number: int)~~~
 
 ## TODO
 - setup.py
