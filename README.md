@@ -6,11 +6,10 @@ A simple python package to search dblp by keywords and venues
 
 ## How to use
 - Installation
-~~~pip install awesome-dblp~~~
+    ```pip install awesome-dblp```
 - Usage
-~~~search_by_keywords_venues(keywords: list, venue_names: list, query_number: int, maximum_query_number: int)~~~
+    ```search_by_keywords_venues(keywords: list, venue_names: list, query_number: int, maximum_query_number: int)```
 
 ## TODO
-- setup.py
 - api
 - GUI
