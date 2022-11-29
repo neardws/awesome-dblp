@@ -28,5 +28,5 @@ setup(
         'Programming Language :: Python :: 3.9',
     ],
     py_modules=["dblp"],
-    install_requires=['tqdm', 'lxml', 'requests', 'thefuzz', 'csv', 'fake_useragent']
+    install_requires=['tqdm', 'lxml', 'requests', 'thefuzz', 'fake_useragent']
 )
