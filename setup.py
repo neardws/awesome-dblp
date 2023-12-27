@@ -4,7 +4,7 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 setup(
     name='awesome-dblp',
-    version='1.0',
+    version='1.1',
     description='A simple python package to search dblp by keywords and venues',
     # The project's main homepage.
     url='https://github.com/neardws/awesome-dblp',
