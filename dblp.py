@@ -18,7 +18,10 @@ DBLP_PUBL_STREAM_URL = DBLP_PUBLICATION_SEARCH_URL + '?q=stream:streams/{type}/{
 DBLP_PERSON_URL = DBLP_BASE_URL + 'pers/xk/{urlpt}'
 DBLP_PUBLICATION_URL = DBLP_BASE_URL + 'rec/bibtex/{key}.xml'
 
-user_agent = UserAgent()
+try:
+    user_agent = UserAgent()
+except:
+    user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
 
 class LazyAPIData(object):
     def __init__(self, lazy_attrs):
